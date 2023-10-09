@@ -1,0 +1,538 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+.home-page {
+  min-height: 100vh;
+  background-color: #222;
+  position: relative;
+}
+.home-page .box-home {
+  position: fixed;
+  min-height: 100vh;
+  background-color: #2c2f36;
+  width: 320px;
+  border-radius: 0 20px 20px 0;
+  transition: 0.7s ease-in-out;
+  left: -350px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  box-shadow: rgba(93, 75, 50, 0.25) 0px 50px 100px -20px,
+    rgba(194, 86, 9, 0.3) 0px 30px 60px -30px,
+    rgba(139, 71, 4, 0.35) 0px -2px 6px 0px inset;
+  z-index: 99;
+}
+.home-page .box-home .box-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: orange;
+}
+.home-page .box-home a {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 20px;
+  border: 3px solid orange;
+  padding: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
+  z-index: 4;
+}
+.home-page .box-home a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 20px;
+  background-color: #f37335;
+  transition: 1s ease;
+  z-index: -1;
+}
+.home-page .box-home a:hover::after {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-page .box-home a:nth-child(1) {
+  margin-top: 50px;
+}
+.hide-box {
+  left: 0px !important;
+}
+/* start nav bar */
+.head {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+.head i {
+  font-size: 25px;
+  color: orange;
+  cursor: pointer;
+  z-index: 99;
+}
+.head .logo {
+  font-size: 35px;
+  color: orange;
+  font-weight: 600;
+}
+.second-head {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+.second-head p {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+/* end nav bar */
+/* start main-sec  */
+.main-sec {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+.main-sec .reset-btn {
+  text-align: center;
+}
+.main-sec .reset-btn button {
+  outline: 0;
+  background-color: orange;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid orange;
+  cursor: pointer;
+  transition: 0.6s ease-out;
+  font-weight: 600;
+}
+.main-sec .reset-btn button:hover {
+  background-color: transparent;
+}
+.main-sec .main-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 35px;
+}
+.main-sec .main-btns .box-content {
+  width: calc(70% / 3);
+  text-align: center;
+  border-radius: 14px;
+  border: 3px solid orange;
+  padding: 10px;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+.main-btns .box-content .box-title {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  border-bottom: 3px solid orange;
+  padding-bottom: 10px;
+}
+.main-btns .box-content .box-btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 30px 10px;
+  position: relative;
+}
+.main-btns .box-content .box-btn p {
+  font-size: 30px;
+  border-radius: 50%;
+  padding: 50px;
+  color: #fff;
+  background-color: orange;
+  cursor: pointer;
+}
+.main-btns .box-content .box-btn i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+/* end main-sec */
+/* start departments sec */
+.departments {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin-top: 90px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.departments .department-title {
+  font-size: 35px;
+  color: #fff;
+  position: absolute;
+  right: 44%;
+  top: -85px;
+  border: 3px solid orange;
+  padding: 10px 50px;
+  border-radius: 20px;
+  background-color: orange;
+  cursor: pointer;
+}
+.departments .department-cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+.department-cards .department-card {
+  width: calc(90% / 4);
+  border-radius: 20px;
+  border: 3px solid orange;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  box-shadow: rgba(215, 128, 6, 0.35) 0px 5px 15px;
+  transition: 0.7s;
+  margin: 15px;
+}
+.department-cards .department-card:hover {
+  transform: scale(1.05);
+}
+.department-cards .department-card img {
+  width: 70%;
+  border-radius: 50%;
+  height: 70%;
+}
+.department-card-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* end departments sec */
+/* start responsive */
+@media screen and (max-width: 676px) {
+  .home-page .box-home {
+    width: 200px;
+    z-index: 11;
+  }
+  .main-sec .main-btns {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .main-sec .main-btns .box-content {
+    width: 90%;
+  }
+  .department-cards .department-card {
+    width: calc(90% / 1);
+  }
+}
+/* end responsive */
+
+/* start quraan page */
+.quraan-page {
+  background-color: #222;
+  width: 100%;
+  padding: 30px;
+}
+.quraan-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.quraan-page .page-title-quraan {
+  font-size: 35px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.quraan-page .quraan-p {
+  font-size: 25px;
+  color: orange;
+  font-weight: 600;
+}
+.quraan-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+.quraan-content .suraah-page {
+  position: absolute;
+  width: 90%;
+  min-height: 30%;
+  background-color: orange;
+  display: none;
+  text-align: center;
+}
+.quraan-content .suraah-page h2 {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.suraah-page i {
+  width: 60px !important;
+  height: 60px !important;
+  position: absolute;
+  background-color: aliceblue;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  padding-top: 15px;
+}
+.suraah-page iframe {
+  width: 70%;
+  margin-top: 50px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.suraah-page p {
+  color: #222;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.suraah-page p:last-child {
+  margin-bottom: 50px;
+}
+.quraan-content .surrah-link {
+  display: block;
+  border: 3px solid orange;
+  padding: 20px 30px;
+  text-decoration: none;
+  text-align: center;
+  background-color: orange;
+  border-radius: 20px;
+  transition: 0.7s ease-in-out;
+  margin: 15px;
+  cursor: pointer;
+}
+.quraan-content .surrah-link:hover {
+  background-color: transparent;
+}
+.quraan-content .surrah-link ol {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  list-style: none;
+}
+/* end quraan page */
+
+/* start Azkar-night */
+.Azkar-night {
+  background-color: #222;
+  width: 100%;
+  padding: 30px;
+}
+.Azkar-head {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.Azkar-head .Azkar-title {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.Azkar-head p {
+  font-size: 25px;
+  color: orange;
+  font-weight: 600;
+}
+.Azkar-head h4 {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.azkar-sec,
+.azkar-sec2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+}
+.azkar-card {
+  width: calc(100% / 4);
+  border-radius: 20px;
+  text-align: center;
+  border: 3px solid orange;
+  padding: 20px 30px;
+  cursor: pointer;
+  min-height: 200px;
+  margin: 20px;
+}
+.azkar-card h3 {
+  font-size: 25px;
+  font-weight: 500;
+  border-bottom: 3px solid #fff;
+  color: orange;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.azkar-card h2 {
+  color: #fff;
+}
+.azkar-title-sec2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+@media screen and (max-width: 676px) {
+  .azkar-card {
+    width: calc(100% / 1);
+  }
+}
+/* end Azkar-night */
+/* top-btn */
+#top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: bisque;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px;
+  display: none;
+}
+#save-btn {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  background: orange;
+  border-radius: 10px;
+  padding: 10px;
+  width: 20%;
+  margin-bottom: 20px;
+  border: 3px solid orange;
+  transform: translateX(200%);
+  transition: 0.5s ease-in;
+  cursor: pointer;
+  display: none;
+}
+#save-btn:hover {
+  background-color: transparent;
+}
+/* top-btn */
+/* start doaa-died */
+.doaa-died {
+  background-color: #222;
+  width: 100%;
+  min-height: 100vh;
+}
+.died-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 30px;
+  text-align: center;
+}
+.died-sec .main-title {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+.died-sec .main-p {
+  font-size: 25px;
+  color: orange;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.died-sec .sac-title {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.died-sec form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.died-sec form #died-input {
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: 3px solid orange;
+  font-size: 25px;
+}
+.died-sec form #died-btn {
+  width: 13%;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #222;
+  border: 3px solid orange;
+  cursor: pointer;
+  margin-left: 20px;
+  text-decoration: none;
+  padding-top: 10px;
+}
+#doaas {
+  margin-top: 50px;
+}
+#doaas ul li {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
+}
+#doaas ul li span {
+  color: orange;
+}
+/* end doaa-died */

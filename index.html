@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المسلم</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body class="home-page">
+    <div class="box-home" id="box-hide">
+      <h2 class="box-title">الوصول السريع</h2>
+      <a href="quraan/main-page-quraan.html" target="_blank">القرآن الكريم</a>
+      <a href="azkar-night/Azkar.html" target="_blank">أذكار الصباح</a>
+      <a href="azkar-night/Azkar2.html" target="_blank">أذكار المساء</a>
+      <a href="Doaa-died/died-doaa.html" target="_blank">أدعيه للمتوفي</a>
+      <a href="Doaa-died/self-doaa.html" target="_blank">أدعيه لنفسي</a>
+      <a href="#">السيره النبوية</a>
+    </div>
+    <header class="head">
+      <i class="fa fa-bars" aria-hidden="true" onclick="toogleBox()"></i>
+      <div class="logo">المسلم</div>
+    </header>
+    <nav class="second-head">
+      <p>
+        قال تعالى : { الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُمْ بِذِكْرِ
+        اللَّهِ ألا بذكر اللَّه تطمئن القلوب } (الرعد : 28 )
+      </p>
+    </nav>
+    <section class="main-sec">
+      <div class="reset-btn">
+        <button id="reset-all">تصفير العدادات</button>
+      </div>
+      <div class="main-btns">
+        <div class="box-content">
+          <h3 class="box-title">سبحان الله</h3>
+          <div class="box-btn">
+            <p id="btn1" onclick="increasing()">0</p>
+            <i id="reset-btn" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">لا إله إلا الله</h3>
+          <div class="box-btn">
+            <p id="btn2" onclick="increasing2()">0</p>
+            <i id="reset-btn2" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">الله أكبر</h3>
+          <div class="box-btn">
+            <p id="btn3" onclick="increasing3()">0</p>
+            <i id="reset-btn3" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">الحمد لله</h3>
+          <div class="box-btn">
+            <p id="btn4" onclick="increasing4()">0</p>
+            <i id="reset-btn4" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">أستغفر الله</h3>
+          <div class="box-btn">
+            <p id="btn5" onclick="increasing5()">0</p>
+            <i id="reset-btn5" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">رب أغفر لي</h3>
+          <div class="box-btn">
+            <p id="btn6" onclick="increasing6()">0</p>
+            <i id="reset-btn6" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">الله أكبر</h3>
+          <div class="box-btn">
+            <p id="btn7" onclick="increasing7()">0</p>
+            <i id="reset-btn7" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">سبحان الله وبحمده سبحان الله العظيم</h3>
+          <div class="box-btn">
+            <p id="btn8" onclick="increasing8()">0</p>
+            <i id="reset-btn8" class="fa fa-undo fa-fw fa-lg"></i>
+          </div>
+        </div>
+      </div>
+      <div class="departments">
+        <h3 class="department-title">أقسامنا</h3>
+        <div class="department-cards">
+          <a class="department-card" href="quraan/main-page-quraan.html">
+            <img src="images/القران الكريم.png" alt="" />
+            <h3 class="department-card-title">القرآن الكريم</h3>
+          </a>
+          <a class="department-card" href="Doaa-died/died-doaa.html">
+            <img src="images/الدعاء.png" alt="" />
+            <h3 class="department-card-title">إنشئ دعاء خاص للمتوفي</h3>
+          </a>
+          <a class="department-card" href="azkar-night/Azkar2.html">
+            <img src="images/الهلال.png" alt="" />
+            <h3 class="department-card-title">أذكار المساء</h3>
+          </a>
+          <a class="department-card" href="azkar-night/Azkar.html">
+            <img src="images/الشمس.png" alt="" />
+            <h3 class="department-card-title">اذكار الصباح</h3>
+          </a>
+          <a class="department-card" href="Doaa-died/self-doaa.html">
+            <img src="images/دعائي.png" alt="" />
+            <h3 class="department-card-title">إنشئ دعاء خاص بك</h3>
+          </a>
+          <a class="department-card" href="#">
+            <img src="images/السيره النبويه.png" alt="" />
+            <h3 class="department-card-title">السيره النبوية</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+    <script src="home.js"></script>
+  </body>
+</html>
